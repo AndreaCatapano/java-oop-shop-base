@@ -23,7 +23,7 @@ public class Product {
     }
 
     public BigDecimal getFullPrice() {
-        if (price != null && tax != null) {
+        if (price != null) {
             return price.add(price.multiply(tax).setScale(2, RoundingMode.DOWN));
         }
         return null;
